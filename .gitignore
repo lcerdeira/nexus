@@ -1,0 +1,35 @@
+# dataset
+data/*
+tests/*
+*.fastq
+*.fasta
+*.fq
+*.fa
+*.bam
+*.sam
+*.gz
+# Rust
+core-rust/target/
+**/*.rs.bk
+
+#Results
+
+results/*
+results_benchmark/
+
+# Nextflow
+pipeline-nf/.nextflow/
+pipeline-nf/work/
+pipeline-nf/.nextflow.log*
+
+# Python
+bio-interpreter/__pycache__/
+bio-interpreter/venv/
+*.env
+
+#others
+
+.nextflow/
+.nexflow.*
+.refact
+Miniforge3.sh

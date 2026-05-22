@@ -1,0 +1,117 @@
+/home/lshlt19/miniforge3/envs/nf-quast/bin/quast.py nexus_assembly.fasta assembly.fasta -R reference.fasta -o quast_results
+
+Version: 5.2.0
+
+System information:
+  OS: Linux-4.18.0-553.63.1.el8_10.x86_64-x86_64-with-glibc2.28 (linux_64)
+  Python version: 3.12.3
+  CPUs number: 32
+
+Started: 2026-05-22 02:07:04
+
+Logging to /home/lshlt19/nexus-assembler/pipeline-nf/work/2d/beecdd58f5fc05e5dd507940bb337a/quast_results/quast.log
+NOTICE: Maximum number of threads is set to 8 (use --threads option to set it manually)
+
+CWD: /home/lshlt19/nexus-assembler/pipeline-nf/work/2d/beecdd58f5fc05e5dd507940bb337a
+Main parameters: 
+  MODE: default, threads: 8, min contig length: 500, min alignment length: 65, min alignment IDY: 95.0, \
+  ambiguity: one, min local misassembly length: 200, min extensive misassembly length: 1000
+
+Reference:
+  /home/lshlt19/nexus-assembler/pipeline-nf/work/2d/beecdd58f5fc05e5dd507940bb337a/reference.fasta ==> reference
+
+Contigs:
+  Pre-processing...
+WARNING: Skipping nexus_assembly because it doesn't contain contigs >= 500 bp.
+
+  2  assembly.fasta ==> assembly
+
+2026-05-22 02:07:06
+Running Basic statistics processor...
+  Reference genome:
+    reference.fasta, length = 2292467, num fragments = 1, GC % = 52.12
+  Contig files: 
+    assembly
+  Calculating N50 and L50...
+    assembly, N50 = 2212540, L50 = 1, auN = 2208402.6, Total length = 2216693, GC % = 52.45, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /home/lshlt19/nexus-assembler/pipeline-nf/work/2d/beecdd58f5fc05e5dd507940bb337a/quast_results/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /home/lshlt19/nexus-assembler/pipeline-nf/work/2d/beecdd58f5fc05e5dd507940bb337a/quast_results/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /home/lshlt19/nexus-assembler/pipeline-nf/work/2d/beecdd58f5fc05e5dd507940bb337a/quast_results/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /home/lshlt19/nexus-assembler/pipeline-nf/work/2d/beecdd58f5fc05e5dd507940bb337a/quast_results/basic_stats/GC_content_plot.pdf
+  Drawing assembly GC content plot...
+    saved to /home/lshlt19/nexus-assembler/pipeline-nf/work/2d/beecdd58f5fc05e5dd507940bb337a/quast_results/basic_stats/assembly_GC_content_plot.pdf
+Done.
+
+2026-05-22 02:07:08
+Running Contig analyzer...
+WARNING: Version of installed minimap2 differs from its version in the QUAST package (2.24). Please make sure that you use an actual version of software.
+  assembly
+  Logging to files /home/lshlt19/nexus-assembler/pipeline-nf/work/2d/beecdd58f5fc05e5dd507940bb337a/quast_results/contigs_reports/contigs_report_assembly.stdout and contigs_report_assembly.stderr...
+  Aligning contigs to the reference
+WARNING: Version of installed minimap2 differs from its version in the QUAST package (2.24). Please make sure that you use an actual version of software.
+  /home/lshlt19/miniforge3/envs/nf-quast/bin/minimap2 -c -x asm10 -B5 -O4,16 --no-long-join \
+  -r 200 -N 50 -s 65 -z 200 --mask-level 0.9 --min-occ 200 -g 2500 --score-N 2 --cs \
+  -t 8 quast_results/quast_corrected_input/reference.fasta quast_results/quast_corrected_input/assembly.fasta \
+  > quast_results/contigs_reports/minimap_output/assembly.coords_tmp 2>> quast_results/contigs_reports/contigs_report_assembly.stderr
+  Analysis is finished.
+
+  Creating total report...
+    saved to /home/lshlt19/nexus-assembler/pipeline-nf/work/2d/beecdd58f5fc05e5dd507940bb337a/quast_results/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /home/lshlt19/nexus-assembler/pipeline-nf/work/2d/beecdd58f5fc05e5dd507940bb337a/quast_results/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /home/lshlt19/nexus-assembler/pipeline-nf/work/2d/beecdd58f5fc05e5dd507940bb337a/quast_results/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /home/lshlt19/nexus-assembler/pipeline-nf/work/2d/beecdd58f5fc05e5dd507940bb337a/quast_results/contigs_reports/misassemblies_plot.pdf
+  Drawing misassemblies FRCurve plot...
+    saved to /home/lshlt19/nexus-assembler/pipeline-nf/work/2d/beecdd58f5fc05e5dd507940bb337a/quast_results/contigs_reports/misassemblies_frcurve_plot.pdf
+Done.
+
+2026-05-22 02:07:10
+Running NA-NGA calculation...
+  assembly, Largest alignment = 377826, NA50 = 198793, NGA50 = 198793, LA50 = 4, LGA50 = 4
+  Drawing cumulative plot...
+    saved to /home/lshlt19/nexus-assembler/pipeline-nf/work/2d/beecdd58f5fc05e5dd507940bb337a/quast_results/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /home/lshlt19/nexus-assembler/pipeline-nf/work/2d/beecdd58f5fc05e5dd507940bb337a/quast_results/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /home/lshlt19/nexus-assembler/pipeline-nf/work/2d/beecdd58f5fc05e5dd507940bb337a/quast_results/aligned_stats/NGAx_plot.pdf
+Done.
+
+2026-05-22 02:07:11
+Running Genome analyzer...
+  NOTICE: No file with genomic features were provided. Use the --features option if you want to specify it.
+
+  NOTICE: No file with operons were provided. Use the -O option if you want to specify it.
+  assembly
+  Analysis is finished.
+  Skipping drawing Genome fraction, % histogram... (less than 2 columns histogram makes no sense)
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2026-05-22 02:07:11
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating PDF with all tables and plots...
+  2 of 2: Creating Icarus viewers...
+Done
+
+2026-05-22 02:07:12
+RESULTS:
+  Text versions of total report are saved to /home/lshlt19/nexus-assembler/pipeline-nf/work/2d/beecdd58f5fc05e5dd507940bb337a/quast_results/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /home/lshlt19/nexus-assembler/pipeline-nf/work/2d/beecdd58f5fc05e5dd507940bb337a/quast_results/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /home/lshlt19/nexus-assembler/pipeline-nf/work/2d/beecdd58f5fc05e5dd507940bb337a/quast_results/report.html
+  PDF version (tables and plots) is saved to /home/lshlt19/nexus-assembler/pipeline-nf/work/2d/beecdd58f5fc05e5dd507940bb337a/quast_results/report.pdf
+  Icarus (contig browser) is saved to /home/lshlt19/nexus-assembler/pipeline-nf/work/2d/beecdd58f5fc05e5dd507940bb337a/quast_results/icarus.html
+  Log is saved to /home/lshlt19/nexus-assembler/pipeline-nf/work/2d/beecdd58f5fc05e5dd507940bb337a/quast_results/quast.log
+
+Finished: 2026-05-22 02:07:12
+Elapsed time: 0:00:08.500274
+NOTICEs: 4; WARNINGs: 2; non-fatal ERRORs: 0
+
+Thank you for using QUAST!
