@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 180" width="100%" height="100%">
+  <g transform="translate(10, 10)">
+    <!-- Letras Iniciais: NE (Fonte refinada, peso Medium e espaçamento elegante) -->
+    <text x="25" y="130" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Helvetica, Arial, sans-serif" font-size="120" font-weight="500" fill="#2D3748" letter-spacing="2">NE</text>
+    
+    <!-- O 'X' estruturado como Silhueta de DNA, mantendo sua elegância original -->
+    <g transform="translate(195, 10)">
+      <!-- Degraus / Pontes de Conexão em Amarelo Ouro Suave -->
+      <rect x="35" y="22" width="50" height="7" rx="3.5" fill="#D69E2E" />
+      <rect x="22" y="52" width="76" height="7" rx="3.5" fill="#D69E2E" />
+      <rect x="22" y="82" width="76" height="7" rx="3.5" fill="#D69E2E" />
+      <rect x="35" y="112" width="50" height="7" rx="3.5" fill="#D69E2E" />
+
+      <!-- Silhueta da Fita Direta (Azul Escuro) -->
+      <path d="M 15 10 C 45 10, 35 130, 105 130 L 85 130 C 15 130, 25 10, 35 10 Z" fill="#2A4365" />
+      
+      <!-- Silhueta da Fita Inversa (Azul Escuro com máscara de profundidade limpa) -->
+      <path d="M 105 10 C 75 10, 85 130, 15 130 L 35 130 C 105 130, 95 10, 85 10 Z" fill="#2A4365" />
+    </g>
+
+    <!-- Letras Finais: US (Alinhadas em espessura e tom com o bloco inicial) -->
+    <text x="325" y="130" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Helvetica, Arial, sans-serif" font-size="120" font-weight="500" fill="#2D3748" letter-spacing="2">US</text>
+  </g>
+</svg>
